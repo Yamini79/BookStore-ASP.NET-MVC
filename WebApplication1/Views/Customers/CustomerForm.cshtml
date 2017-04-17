@@ -1,0 +1,32 @@
+﻿@model BookStore.ViewModels.CustomerFormViewModel
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Customer</h2>
+@using (Html.BeginForm("Save", "Customers"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.customer.name)
+        @Html.TextBoxFor(m => m.customer.name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.customer.BirthDate)
+        @Html.TextBoxFor(m => m.customer.BirthDate, "{0:d MMM yyyy}", new { @class = "form-control" })
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.customer.MembershipTypeId)
+        @Html.DropDownListFor(m=>m.customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", new { @class ="form-control"})
+    </div>
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.customer.IsSubscribedToNewsletter) Subscribed to News Letter?
+        </label>
+    </div>
+    @Html.HiddenFor(m => m.customer.id)
+   
+     <button type="submit" class="btn btn-primary">Save</button>
+}
+

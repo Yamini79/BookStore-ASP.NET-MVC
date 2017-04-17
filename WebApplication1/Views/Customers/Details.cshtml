@@ -1,0 +1,18 @@
+﻿@model BookStore.Models.Customer
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.name</h2>
+<ul>
+    <li>
+        Membership Type: @Model.MembershipType.Name
+    </li>
+    @if (Model.BirthDate != null)
+    {
+    <li>
+        Birthdate : @Model.BirthDate
+    </li>
+    }
+</ul>
+

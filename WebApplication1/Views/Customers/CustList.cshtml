@@ -1,0 +1,34 @@
+﻿@model List<BookStore.Models.Customer>
+@{
+    ViewBag.Title = "CustList";
+}
+
+<br />
+<br />
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                Customers
+            </th>
+            <th>
+                Discount Rate
+            </th>
+            <th>Membership Type</th>
+        </tr>
+    </thead>
+    <tbody>
+                @foreach (var i in Model)
+                {
+                    <tr>
+                        <td>
+                        <a href="/Customers/Edit/@i.id">@i.name</a>
+                        </td>
+                        <td> @i.MembershipType.DiscountRate%</td>
+                        <td>@i.MembershipType.Name</td>
+                    </tr>
+                }
+            
+    </tbody>
+</table>
+

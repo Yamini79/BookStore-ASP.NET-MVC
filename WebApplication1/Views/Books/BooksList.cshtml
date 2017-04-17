@@ -1,0 +1,26 @@
+﻿@model List<BookStore.Models.Book>
+@{
+    ViewBag.Title = "BooksList";
+}
+<br />
+<h2>Books</h2>
+<a href="/Books/New" class="btn btn-primary">New Book</a>
+<br />
+<br />
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Book</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var books in Model)
+        {
+            <tr>
+                <td><a href="/Books/Edit/@books.id">@books.bname</a></td>
+                <td>@books.Genre.Type</td>
+            </tr>
+        }
+    </tbody>
+</table>

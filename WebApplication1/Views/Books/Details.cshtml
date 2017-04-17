@@ -1,0 +1,13 @@
+﻿@model BookStore.Models.Book
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.bname</h2>
+<ul>
+    <li>Genre: @Model.Genre.Type</li>
+    <li>Release Date: @Model.ReleaseDate</li>
+    <li>Date Added: @Model.DateAdded</li>
+    <li>Number in Stock: @Model.AvailCopies</li>
+</ul>
+
