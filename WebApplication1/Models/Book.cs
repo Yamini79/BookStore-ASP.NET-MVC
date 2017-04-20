@@ -10,6 +10,7 @@ namespace BookStore.Models
     {
         public int id { get; set; }
 
+        [Required]
         [Display(Name = "Name")]
         public string bname { get; set; }
 
@@ -17,6 +18,7 @@ namespace BookStore.Models
 
         public float? price { get; set; }
 
+        [Required]
         public DateTime? ReleaseDate { get; set; }
 
         public DateTime? DateAdded { get; set; }
@@ -27,6 +29,7 @@ namespace BookStore.Models
         public int GenreId { get; set; }
 
         [Display(Name = "Number in Stock")]
+        [Range(1,20)]
         public int AvailCopies { get; set; }
 
     }

@@ -23,6 +23,7 @@ namespace BookStore.Models
         public byte MembershipTypeId { get; set; }
 
         [Display(Name ="Date Of Birth")]
+        [Min18YearsIfAMemeber]
         public DateTime? BirthDate { get; set; }
 
     }

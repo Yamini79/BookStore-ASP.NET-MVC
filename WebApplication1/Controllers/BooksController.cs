@@ -74,6 +74,7 @@ namespace WebApplication1.Controllers
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();
+
             var viewModel = new BookFormViewModel
             {
                 Genres = genres
@@ -82,8 +83,18 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Book book)
         {
+            if(!ModelState.IsValid)
+            {
+                var viewModel = new BookFormViewModel
+                {
+                    Book = book,
+                    Genres = _context.Genres.ToList()
+                };
+                return View("BookForm", viewModel);
+            }
             if (book.id == 0)
                 _context.Books.Add(book);
             else

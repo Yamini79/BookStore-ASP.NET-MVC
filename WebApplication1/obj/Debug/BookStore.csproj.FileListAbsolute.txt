@@ -104,3 +104,6 @@ F:\visual studio\BookStore\WebApplication1\obj\Debug\BookStore.csprojResolveAsse
 F:\visual studio\BookStore\WebApplication1\obj\Debug\BookStore.Migrations.AddReleaseAddedDateNull.resources
 F:\visual studio\BookStore\WebApplication1\obj\Debug\BookStore.Migrations.UpdateGenre.resources
 F:\visual studio\BookStore\WebApplication1\obj\Debug\BookStore.Migrations.AddNulltoBooks.resources
+F:\visual studio\BookStore\WebApplication1\obj\Debug\BookStore.Migrations.addupdate.resources
+F:\visual studio\BookStore\WebApplication1\obj\Debug\BookStore.Migrations.addupdate1.resources
+F:\visual studio\BookStore\WebApplication1\obj\Debug\BookStore.Migrations.addRangetoAvailCopies.resources
